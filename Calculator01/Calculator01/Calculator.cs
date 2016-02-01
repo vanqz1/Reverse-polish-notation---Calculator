@@ -64,79 +64,89 @@ namespace Calculator01
                         break;
                     }
                 }
-                if (char.ToLower(expression[i]) == functions.sin.ToString()[0] && char.ToLower(expression[i + 1]) == functions.sin.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.sin.ToString()[2])
+                if(char.IsLetter(expression[i]))
                 {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.sin.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
+                    CalculateFunction(expression, outputRecord,ref i);
                 }
-                else if (char.ToLower(expression[i]) == functions.cos.ToString()[0] && char.ToLower(expression[i + 1]) == functions.cos.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.cos.ToString()[2])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.cos.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.tg.ToString()[0] && char.ToLower(expression[i + 1]) == functions.tg.ToString()[1])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.tg.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.cotg.ToString()[0] && char.ToLower(expression[i + 1]) == functions.cotg.ToString()[1] &&
-                    char.ToLower(expression[i + 2]) == functions.cotg.ToString()[2] && char.ToLower(expression[i + 2]) == functions.cotg.ToString()[3])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.cotg.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.pow.ToString()[0] && char.ToLower(expression[i + 1]) == functions.pow.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.pow.ToString()[2])
-                {
-                    var result = CalcFunctionWithTwoParameters(i, expression, functions.pow.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.root.ToString()[0] && char.ToLower(expression[i + 1]) == functions.root.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.root.ToString()[2] && char.ToLower(expression[i + 3]) == functions.root.ToString()[3])
-                {
-                    var result = CalcFunctionWithTwoParameters(i, expression, functions.root.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.log.ToString()[0] && char.ToLower(expression[i + 1]) == functions.log.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.log.ToString()[2])
-                {
-                    var result = CalcFunctionWithTwoParameters(i, expression, functions.log.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.ln.ToString()[0] && char.ToLower(expression[i + 1]) == functions.ln.ToString()[1])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.ln.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.sqrt.ToString()[0] && char.ToLower(expression[i + 1]) == functions.sqrt.ToString()[1]
-                && char.ToLower(expression[i + 2]) == functions.sqrt.ToString()[2] && char.ToLower(expression[i + 3]) == functions.sqrt.ToString()[3])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.sqrt.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
-                else if (char.ToLower(expression[i]) == functions.exp.ToString()[0] && char.ToLower(expression[i + 1]) == functions.exp.ToString()[1]
-                    && char.ToLower(expression[i + 2]) == functions.exp.ToString()[2])
-                {
-                    var result = CalcFuncWithOneParameter(i, expression, functions.exp.ToString());
-                    outputRecord.Add(result.Result.ToString());
-                    i = result.Index;
-                }
+                
             }
 
             EmptyCurrentNumber(outputRecord);
             EmpryTheOperatorStack(operators, outputRecord);
             return CalcReversedPolishRecord(outputRecord, index);
+        }
+
+        private void CalculateFunction(String expression, List<string> outputRecord,ref int i)
+        {
+            if (char.ToLower(expression[i]) == functions.sin.ToString()[0] && char.ToLower(expression[i + 1]) == functions.sin.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.sin.ToString()[2])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.sin.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.cos.ToString()[0] && char.ToLower(expression[i + 1]) == functions.cos.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.cos.ToString()[2])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.cos.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.tg.ToString()[0] && char.ToLower(expression[i + 1]) == functions.tg.ToString()[1])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.tg.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.cotg.ToString()[0] && char.ToLower(expression[i + 1]) == functions.cotg.ToString()[1] &&
+                char.ToLower(expression[i + 2]) == functions.cotg.ToString()[2] && char.ToLower(expression[i + 2]) == functions.cotg.ToString()[3])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.cotg.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.pow.ToString()[0] && char.ToLower(expression[i + 1]) == functions.pow.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.pow.ToString()[2])
+            {
+                var result = CalcFunctionWithTwoParameters(i, expression, functions.pow.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.root.ToString()[0] && char.ToLower(expression[i + 1]) == functions.root.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.root.ToString()[2] && char.ToLower(expression[i + 3]) == functions.root.ToString()[3])
+            {
+                var result = CalcFunctionWithTwoParameters(i, expression, functions.root.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.log.ToString()[0] && char.ToLower(expression[i + 1]) == functions.log.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.log.ToString()[2])
+            {
+                var result = CalcFunctionWithTwoParameters(i, expression, functions.log.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.ln.ToString()[0] && char.ToLower(expression[i + 1]) == functions.ln.ToString()[1])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.ln.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.sqrt.ToString()[0] && char.ToLower(expression[i + 1]) == functions.sqrt.ToString()[1]
+            && char.ToLower(expression[i + 2]) == functions.sqrt.ToString()[2] && char.ToLower(expression[i + 3]) == functions.sqrt.ToString()[3])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.sqrt.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            else if (char.ToLower(expression[i]) == functions.exp.ToString()[0] && char.ToLower(expression[i + 1]) == functions.exp.ToString()[1]
+                && char.ToLower(expression[i + 2]) == functions.exp.ToString()[2])
+            {
+                var result = CalcFuncWithOneParameter(i, expression, functions.exp.ToString());
+                outputRecord.Add(result.Result.ToString());
+                i = result.Index;
+            }
+            i = (int)i;
         }
 
         public void EmpryTheOperatorStack(Stack<string> operators, List<string> outputRecord)
@@ -401,10 +411,6 @@ namespace Calculator01
                     }
                     return res;
                 case "ln":
-                    if()
-                    {
-                    
-                    }
                     return Math.Log(operand);
                 case "exp":
                     return Math.Pow(Math.E, operand);
