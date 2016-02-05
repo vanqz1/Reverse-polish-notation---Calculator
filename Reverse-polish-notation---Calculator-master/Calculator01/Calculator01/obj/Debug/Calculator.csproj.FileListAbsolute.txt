@@ -1,0 +1,15 @@
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\bin\Debug\Calculator01.exe.config
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.exe
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.pdb
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\bin\Debug\Calculator01.exe
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\bin\Debug\Calculator01.pdb
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\MainWindow.baml
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\MainWindow.g.cs
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\App.g.cs
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01_MarkupCompile.cache
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.g.resources
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.Properties.Resources.resources
+C:\Users\ivanka.zaycheva\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\Lenovo\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\bin\Debug\Calculator01.exe.config
+C:\Users\Lenovo\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.exe
+C:\Users\Lenovo\Desktop\Reverse-polish-notation---Calculator-master\Reverse-polish-notation---Calculator-master\Calculator01\Calculator01\obj\Debug\Calculator01.pdb
